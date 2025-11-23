@@ -19,6 +19,9 @@ void main() {
 
       // Verify that the child is rendered
       expect(find.text('Test Child'), findsOneWidget);
+
+      // Wait for any animations to complete
+      await tester.pumpAndSettle();
     });
 
     testWidgets('Shaker widget accepts custom parameters',
@@ -42,6 +45,9 @@ void main() {
 
       // Verify that the child icon is rendered
       expect(find.byIcon(Icons.star), findsOneWidget);
+
+      // Wait for animations to complete
+      await tester.pumpAndSettle();
     });
 
     testWidgets('Shaker widget with isShaking false does not animate',
@@ -113,6 +119,7 @@ void main() {
         ),
       );
       expect(find.byIcon(Icons.home), findsOneWidget);
+      await tester.pumpAndSettle();
 
       // Test with Container child
       await tester.pumpWidget(
@@ -129,6 +136,7 @@ void main() {
         ),
       );
       expect(find.byType(Container), findsWidgets);
+      await tester.pumpAndSettle();
     });
   });
 }
