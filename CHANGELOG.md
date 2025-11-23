@@ -1,6 +1,10 @@
 ## 1.0.1
 
-* Version 1.0.1
+* Added comprehensive dartdoc comments to all public API elements (100% coverage)
+* Improved package description for better clarity
+* Enhanced documentation with detailed parameter descriptions and examples
+* Updated README.md with complete API reference and usage examples
+* All files verified and up to date with latest package information
 
 ## 1.0.0
 

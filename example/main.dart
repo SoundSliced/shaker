@@ -31,19 +31,21 @@ class ShakerExamplePage extends StatefulWidget {
 class _ShakerExamplePageState extends State<ShakerExamplePage> {
   bool _isShaking = false;
 
-  void _triggerShake() {
+  void _triggerShake({bool autoReset = true}) {
     setState(() {
       _isShaking = true;
     });
 
     // Reset shake state after animation completes
-    Future.delayed(const Duration(milliseconds: 1500), () {
-      if (mounted) {
-        setState(() {
-          _isShaking = false;
-        });
-      }
-    });
+    if (autoReset) {
+      Future.delayed(const Duration(milliseconds: 1500), () {
+        if (mounted) {
+          setState(() {
+            _isShaking = false;
+          });
+        }
+      });
+    }
   }
 
   @override
@@ -90,6 +92,15 @@ class _ShakerExamplePageState extends State<ShakerExamplePage> {
               rotation: -0.05,
               offset: const Offset(0.3, 0.3),
               curve: Curves.bounceInOut,
+              onComplete: () {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Text('Custom shake completed!')),
+                );
+                //reset shake state
+                setState(() {
+                  _isShaking = false;
+                });
+              },
               child: Container(
                 width: 100,
                 height: 100,

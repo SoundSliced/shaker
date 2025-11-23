@@ -23,7 +23,7 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  shaker: ^1.0.0
+  shaker: ^1.0.1
 ```
 
 Then run:
@@ -48,17 +48,21 @@ class MyWidget extends StatefulWidget {
 class _MyWidgetState extends State<MyWidget> {
   bool _isShaking = false;
 
-  void _triggerShake() {
+   void _triggerShake({bool autoReset = true}) {
     setState(() {
       _isShaking = true;
     });
-    
-    // Reset after animation
-    Future.delayed(const Duration(milliseconds: 1500), () {
-      setState(() {
-        _isShaking = false;
+
+    // Reset shake state after animation completes
+    if (autoReset) {
+      Future.delayed(const Duration(milliseconds: 1500), () {
+        if (mounted) {
+          setState(() {
+            _isShaking = false;
+          });
+        }
       });
-    });
+    }
   }
 
   @override
@@ -83,7 +87,7 @@ class _MyWidgetState extends State<MyWidget> {
 
 ```dart
 Shaker(
-  isShaking: true,
+  isShaking: _isShaking,
   duration: const Duration(milliseconds: 800),
   hz: 6, // Shake frequency
   rotation: -0.05, // Rotation angle
@@ -91,6 +95,9 @@ Shaker(
   curve: Curves.bounceInOut, // Animation curve
   onComplete: () {
     print('Shake animation completed!');
+    setState(() {
+        _isShaking = false;
+      });
   },
   child: Container(
     width: 100,
