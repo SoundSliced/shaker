@@ -1,6 +1,6 @@
 /// shaker package
 ///
 /// This library exports all public APIs for the shaker package.
-library shaker;
+library;
 
 export 'src/shaker.dart';

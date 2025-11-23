@@ -1,5 +1,5 @@
 name: shaker
-description: A Flutter package for shaker functionality
+description: A Flutter package that provides an easy-to-use widget for adding customizable shake animations to any Flutter widget. Built on flutter_animate with support for duration, frequency, rotation, offset, and curve customization.
 issue_tracker: https://github.com/SoundSliced/shaker/issues
 repository: https://github.com/SoundSliced/shaker
 version: 1.0.0
