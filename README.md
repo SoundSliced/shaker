@@ -5,6 +5,12 @@ A Flutter package that provides an easy-to-use widget for adding shake animation
 [![pub package](https://img.shields.io/pub/v/shaker.svg)](https://pub.dev/packages/shaker)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+## Demo
+
+![Demo](https://raw.githubusercontent.com/SoundSliced/shaker/main/example/assets/example.gif)
+
+
+
 ## Features
 
 ✨ **Easy Integration** - Wrap any widget with `Shaker` to add shake animations
@@ -23,7 +29,7 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  shaker: ^1.0.1
+  shaker: ^1.0.2
 ```
 
 Then run:

@@ -1,3 +1,7 @@
+## 1.0.2
+
+* Added Demo GIF example
+
 ## 1.0.1
 
 * Added comprehensive dartdoc comments to all public API elements (100% coverage)

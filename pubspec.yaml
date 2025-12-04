@@ -2,7 +2,7 @@ name: shaker
 description: Easy-to-use Flutter widget to shake any child widget with customizable duration, frequency, rotation, offset, and curve.
 issue_tracker: https://github.com/SoundSliced/shaker/issues
 repository: https://github.com/SoundSliced/shaker
-version: 1.0.1
+version: 1.0.2
 homepage: https://github.com/SoundSliced/shaker
 
 environment:
