@@ -29,7 +29,7 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  shaker: ^2.1.1
+  shaker: ^2.1.0
 ```
 
 Then run:

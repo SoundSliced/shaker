@@ -1,5 +1,4 @@
-## 2.1.1
-- CHANGELOG and README updated
+
 
 ## 2.1.0
 - `s_packages` dependency upgraded
