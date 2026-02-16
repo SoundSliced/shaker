@@ -1,6 +1,8 @@
- 
+## 2.1.1
+- CHANGELOG and README updated
+
 ## 2.1.0
-- `s_packages` dependency upgraded to ^1.3.0
+- `s_packages` dependency upgraded
 - Added `ShakeController` for programmatic shake triggering via `controller.shake()`
 
 ## 2.0.0
