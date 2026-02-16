@@ -29,7 +29,7 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  shaker: ^2.0.0
+  shaker: ^2.1.0
 ```
 
 Then run:
@@ -114,6 +114,21 @@ Shaker(
 )
 ```
 
+### Programmatic Shake with ShakeController
+
+```dart
+final shakeController = ShakeController();
+
+// In your widget:
+Shaker(
+  controller: shakeController,
+  child: Icon(Icons.favorite, size: 100, color: Colors.red),
+)
+
+// Trigger shake programmatically:
+shakeController.shake();
+```
+
 ## API Reference
 
 ### Shaker Widget Parameters
@@ -128,6 +143,7 @@ Shaker(
 | `offset` | `Offset?` | `Offset(0.2, 0.5)` | Direction and intensity of shake |
 | `curve` | `Curve?` | `Curves.easeInOut` | Animation curve for easing |
 | `onComplete` | `Function?` | `null` | Callback executed when animation completes |
+| `controller` | `ShakeController?` | `null` | Controller for programmatic shake triggering via `controller.shake()` |
 
 ## Example App
 
